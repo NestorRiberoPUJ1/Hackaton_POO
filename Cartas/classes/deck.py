@@ -1,4 +1,5 @@
 from . import card
+import random
 
 class Deck:
 
@@ -26,3 +27,6 @@ class Deck:
         for card in self.cards:
             card.card_info()
 
+    def randomCard(self):
+        rcard=self.cards[random.randint(0, len(self.cards))]
+        return rcard
